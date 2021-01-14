@@ -17,6 +17,27 @@
 
         //una aplicacion tiene que funcionar para cualquier valor dado
 
+        const SEGUNDOS_TOTALES = parseInt(prompt('Dame una cantidad de segundos'));
+
+        console.log(typeof SEGUNDOS_TOTALES);
+        var horas;
+        var minutos;
+        var segundosFinales;
+
+        horas = SEGUNDOS_TOTALES / (60 * 60);
+        segundosFinales = SEGUNDOS_TOTALES % (60 * 60);
+
+        minutos = segundosFinales / 60;
+        segundosFinales = segundosFinales % 60;
+
+        //reglas de parseo - me convertir datos
+        horas = parseInt(horas); //15
+
+        //reglas de redonde
+        minutos = Math.trunc(minutos); //5
+
+
+        console.log('En ' + SEGUNDOS_TOTALES + ' hay ' + horas + ' horas, ' + minutos + ' minutos, ' + segundosFinales + ' segundos');
 
     </script>
 
